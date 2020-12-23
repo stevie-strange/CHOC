@@ -39,12 +39,21 @@ for record in fit_file.get_messages("record"):
                     cho = 12.86 * current_power - 251
                     total_cho = total_cho + (cho/24/60/60)
 
+# Counter for the activity duration
+activity_duration = 0
+
+# read the total activity duration
+for activity in fit_file.get_messages("activity"):
+
+    for data in activity:
+        if data.name == 'total_timer_time':
+            activity_duration = activity_duration + data.value
+    
+# Convert activity to minutes
+activity_duration = round(activity_duration / 60)
+
 # Inform user about the results
 print("Processing has finished.")
+print("Total activity duration (min): ", activity_duration)
 print("Total carbohydrates consumed (g): ", round(total_cho))
-
-        #if data.name == 'timestamp':
-            #print(f"{data.name}, {data.value}, {data.units}")
-         #   current_timestamp = data.value
-          #  print(current_timestamp)
-            #print(type(current_timestamp))
+print("Carboyhdrates consumed per hour (g): ", round(total_cho / activity_duration * 60))
