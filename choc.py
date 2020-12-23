@@ -16,25 +16,32 @@ fit_file = FitFile(file_path)
 # Inform user about start of processing
 print("Processing of FIT file started....")
 
+# Reset CHO count
 total_cho = 0
 
+# Parse all record messages and extract the power information
 for record in fit_file.get_messages("record"):
     
     for data in record:
         
+        # Reset power 
         current_power = 0
 
         if data.name == 'power':
-            #print(f"{data.name}, {data.value}, {data.units}")
+            
+            # Extract the current power value
             current_power = data.value
-            #print(current_power)
-
+            
+            # validate the power information
             if current_power is not None:
+                # if the power value is below the threshold value apply the first formula
                 if current_power <= CURVE_THRESHOLD:
                     cho = 11.43 * current_power
                     
                     # scaled down from CHO per day to 1 second
                     total_cho = total_cho + (cho/24/60/60)
+               
+                # Since the power value is above the threshold use the second formula
                 else:
                     cho = 12.86 * current_power - 251
                     total_cho = total_cho + (cho/24/60/60)
