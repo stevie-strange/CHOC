@@ -4,7 +4,17 @@ from fitparse import FitFile
 # Split point of the 2 linear functions
 CURVE_THRESHOLD = 175
 
-fit_file = FitFile('BikeFile3.fit')
+# Welcome message
+print("CHOC - Individual carbohydrates calculator")
+
+# User Input: Path to FIT file for analysis
+file_path = input("Enter the FIT file: ")
+
+# Read FIT file based on user input
+fit_file = FitFile(file_path)
+
+# Inform user about start of processing
+print("Processing of FIT file started....")
 
 total_cho = 0
 
@@ -29,11 +39,12 @@ for record in fit_file.get_messages("record"):
                     cho = 12.86 * current_power - 251
                     total_cho = total_cho + (cho/24/60/60)
 
-print("Total carbos: ", total_cho)
+# Inform user about the results
+print("Processing has finished.")
+print("Total carbohydrates consumed (g): ", round(total_cho))
 
         #if data.name == 'timestamp':
             #print(f"{data.name}, {data.value}, {data.units}")
          #   current_timestamp = data.value
           #  print(current_timestamp)
             #print(type(current_timestamp))
-
