@@ -3,6 +3,7 @@ from fitparse import FitFile
 
 # Split point of the 2 linear functions
 CURVE_THRESHOLD = 175
+# TO DO: add other constants of the linear functions
 
 # Welcome message
 print("CHOC - Individual carbohydrates calculator")
