@@ -3,7 +3,14 @@ from fitparse import FitFile
 
 # Split point of the 2 linear functions
 CURVE_THRESHOLD = 175
-# TO DO: add other constants of the linear functions
+
+# Slope & intercept of first linear function
+F1_SLOPE = 11.43
+F1_INTERCEPT = 0
+
+# Slope & intercept of second linear function
+F2_SLOPE = 12.86
+F2_INTERCEPT = -251
 
 # Welcome message
 print("CHOC - Individual carbohydrates calculator")
@@ -37,14 +44,14 @@ for record in fit_file.get_messages("record"):
             if current_power is not None:
                 # if the power value is below the threshold value apply the first formula
                 if current_power <= CURVE_THRESHOLD:
-                    cho = 11.43 * current_power
+                    cho = F1_SLOPE * current_power + F1_INTERCEPT
                     
                     # scaled down from CHO per day to 1 second
                     total_cho = total_cho + (cho/24/60/60)
                
                 # Since the power value is above the threshold use the second formula
                 else:
-                    cho = 12.86 * current_power - 251
+                    cho = F2_SLOPE * current_power + F2_INTERCEPT
                     total_cho = total_cho + (cho/24/60/60)
 
 # Counter for the activity duration
