@@ -16,6 +16,7 @@ The purpose of this project is to estimate the effective consumption of carbohyd
 
 <h2>General approach
 
+![GitHub Logo](/images/logo.png)
 
 
 <h2>Usage
