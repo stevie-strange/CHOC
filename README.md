@@ -33,12 +33,17 @@ For each of these 2 parts an individual linear function f(x) = m\*x+b can be def
 
 * Intercept of CHO & FAT = ( 2200 g/day / 175 Watts)
 * Intersection with x-axis = origin (0/0) since the recording was started earlier than the actual test.
-* Top end of the 2nd linear function = (6050 g/day / 490 Watts)
+* Top end of the 2nd linear function = (6000 g/day / 490 Watts)
 
 Based on these data points the following 2 linear functions can be derived:
 
 1. f(x) = 12,57 \* x for x <= 175 Watts
-2. f(x) = 12,22 \* x - 65 for x > 175 Watts
+2. f(x) = 12,06 \* x + 91 for x > 175 Watts
+
+The diagram below visualizes the determination of these key parameters.
+
+*Notice: Due to the lack of the detailed data, the parameters were estimated based on the available diagram.*
+
 
 <h2>Usage
 
