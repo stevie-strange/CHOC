@@ -6,12 +6,12 @@ import plotly.graph_objects as go
 CURVE_THRESHOLD = 175
 
 # Slope & intercept of first linear function
-F1_SLOPE = 11.43
+F1_SLOPE = 12.57
 F1_INTERCEPT = 0
 
 # Slope & intercept of second linear function
-F2_SLOPE = 12.86
-F2_INTERCEPT = -251
+F2_SLOPE = 12.06
+F2_INTERCEPT = 91
 
 
 # function to calculate the CHO consumption
