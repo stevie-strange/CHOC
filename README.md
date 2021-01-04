@@ -11,10 +11,14 @@ The purpose of this project is to estimate the effective consumption of carbohyd
 
 <h2>Prerequisites
   
-  Indirect calorimetry based on a spirometry.
+  * Indirect calorimetry based on a spirometry.
+  * Python libraries fitparse, scipy, plotly.
+  * Cycling workouts with power data (FIT format).
  
 
 <h2>General approach
+
+The starting point is the indirect calorimetry as shown in the picture below.
 
 ![GitHub Logo](/images/logo.png)
 
