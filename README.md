@@ -20,8 +20,25 @@ The purpose of this project is to estimate the effective consumption of carbohyd
 
 The starting point is the indirect calorimetry as shown in the picture below.
 
-![GitHub Logo](/images/Kalo_2018_cut.jpg)
+![Initial indirect calorimetry](/images/Kalo_2018_cut.jpg)
 
+Based on this result, the consumption curve for the carbohydrates (in black) can be split into 2 distinct parts.
+The first part starts at the intersection point with the x-axis and continues up to the intercept of the CHO and the fat oxidation curves.
+
+After this point, the second part of the CHO curve starts that shows a steeper angle than the first part. The second part ends with the ultimate end of the spirometry test.
+
+For each of these 2 parts an individual linear function f(x) = m\*x+b can be defined as an approximation of the CHO consumption.
+
+<h3>Parameters
+
+* Intercept of CHO & FAT = ( 2200 g/day / 175 Watts)
+* Intersection with x-axis = origin (0/0) since the recording was started earlier than the actual test.
+* Top end of the 2nd linear function = (6050 g/day / 490 Watts)
+
+Based on these data points the following 2 linear functions can be derived:
+
+1. f(x) = 12,57 \* x for x <= 175 Watts
+2. f(x) = 12,22 \* x - 65 for x > 175 Watts
 
 <h2>Usage
 
