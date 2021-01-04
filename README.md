@@ -44,7 +44,27 @@ The diagram below visualizes the determination of these key parameters.
 
 *Notice: Due to the lack of the detailed data, the parameters were estimated based on the available diagram.*
 
+![Adopted indirect calorimetry](/images/Calometry.jpg)
+
+
+<h2>Reuse of the program
+
+Since the calculation is based on a person's individual results of a spiroergometry some parameters have to be adapted to fit it to the values of that person.
+
+* The constant CURVE THRESHOLD
+* The constants F1_SLOPE & F1_INTERCEPT for the first linear function.
+* The constants F2_SLOPE & F2_INTERCEPT for the second linear function.
+
+*Notice: The consumption of carbohydrates is based on gramms per day. Please adjust your results to that scale before changing the values.*
 
 <h2>Usage
+
+The usage of the program is fairly easy. Just start it and it will prompt you for the FIT file to be analyzed.
+After finishing the analysis, the program will return
+
+* Total activity duration in minutes.
+* Total consumption of carbohydrates for the activity in gramms.
+* The consumption of carbohydrates in gramms normalized per hour.
+* A diagram to show the course of the consumption during the activity.
 
 
