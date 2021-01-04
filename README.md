@@ -20,7 +20,7 @@ The purpose of this project is to estimate the effective consumption of carbohyd
 
 The starting point is the indirect calorimetry as shown in the picture below.
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/Kalo_2018_cut.jpg)
 
 
 <h2>Usage
