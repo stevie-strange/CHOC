@@ -81,4 +81,12 @@ After finishing the analysis, the program will return
 * The consumption of carbohydrates in gramms normalized per hour.
 * A diagram to show the course of the consumption during the activity.
 
+The image below shows the complete lifecycle for the processing of a fit file:
+
+![Running_the_script](/images/usage1.png)
+
+The next image shows the diagram created based on the activity.
+The activity is a workout and you can easily identify the CHO values based on the different intervals.
+
+![Diagram_of_workout](/images/usage2.png)
 
