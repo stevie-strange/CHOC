@@ -57,6 +57,20 @@ Since the calculation is based on a person's individual results of a spiroergome
 
 *Notice: The consumption of carbohydrates is based on gramms per day. Please adjust your results to that scale before changing the values.*
 
+<h2>Installation
+ 
+In general, the following steps are necessary to run the python script: 
+  
+* install python (Python version 3 recommended)
+* open a terminal and type the following commands to install the required python libraries
+* pip install scipy
+* pip install fitparse
+* pip install plotly
+* download the file choc.py of this repository to your PC
+* open a terminal and navigate to the directory where you saved the file choc.py
+* type "python choc.py"
+* enter the path to your fit file when prompted for it
+
 <h2>Usage
 
 The usage of the program is fairly easy. Just start it and it will prompt you for the FIT file to be analyzed.
@@ -67,4 +81,12 @@ After finishing the analysis, the program will return
 * The consumption of carbohydrates in gramms normalized per hour.
 * A diagram to show the course of the consumption during the activity.
 
+The image below shows the complete lifecycle for the processing of a fit file:
+
+![Running_the_script](/images/usage1.png)
+
+The next image shows the diagram created based on the activity.
+The activity is a workout and you can easily identify the CHO values based on the different intervals.
+
+![Diagram_of_workout](/images/usage2.png)
 
